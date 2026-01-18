@@ -1,11 +1,10 @@
 import React from 'react'
+import WeatherPage from './pages/WeatherPage.jsx'
 
 const App = () => {
   return (
     <>
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <WeatherPage />
     </>
   )
 }
