@@ -1,0 +1,1 @@
+export const GLASS_BOX = "py-2.5 px-4 bg-white/40 backdrop-blur-md border border-white/30 rounded-xl";
