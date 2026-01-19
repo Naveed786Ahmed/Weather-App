@@ -19,11 +19,12 @@ export const useWeather = () => {
             setLoading(true);
             setError(null);
 
-            const data = await fetchWeatherData(city);
+            const data = await fetchWeatherData(city);            
             setWeather(data);
 
         } catch (error) {
-            setError("City not found")
+            console.log(error);
+            setError("Something Went Wrong")
 
         } finally {
             setLoading(false);

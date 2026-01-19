@@ -31,10 +31,11 @@ const getDailyForecast = (list) => {
 export const fetchWeatherData = async (city) => {
 
     const { data: current } = await getCurrentWeather(city);
-
+    
     const { lat, lon } = current.coord;
     const { data: forecast } = await getForecast(lat, lon);
-
+    
+    
     return {
         city: current.name,
         temp: Math.round(current.main.temp),

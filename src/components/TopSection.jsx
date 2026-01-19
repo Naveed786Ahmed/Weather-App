@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { STRINGS } from '../constants'
 import { GLASS_BOX } from '../constants/classes.js'
-import { useWeather } from '../hooks/useWeather.js'
 
-const TopSection = ({ darkMode, toggleTheme }) => {
+const TopSection = ({ darkMode, toggleTheme, loading, searchCity }) => {
+
+    useEffect(() => {
+        searchCity("murree");
+    }, []);
 
     const [city, setCity] = useState("");
-    const {error, loading, searchCity} = useWeather()
 
     return (
         <>
@@ -34,7 +36,7 @@ const TopSection = ({ darkMode, toggleTheme }) => {
                         className={`${GLASS_BOX} flex items-center hover:bg-white/60 transition-all duration-300 cursor-pointer`}>
                         {
                             darkMode
-                                ? <Sun size={18} className='text-yellow-400' />
+                                ? <Sun size={18} className='text-white' />
                                 : <Moon size={18} className="text-black-500" />
                         }
                     </button>
