@@ -1,4 +1,4 @@
-# 🌦️ Weather App (React)
+# 🌦️ Weather App
 
 A modern, responsive weather dashboard built with React and Tailwind CSS. This application provides real-time weather updates and a 5-day forecast using the OpenWeather API.
 
@@ -49,39 +49,12 @@ src/
 └── main.jsx
 ```
 
----
-
-## Environment Variables
-
-Create a `.env` file in the project root:
-
-```env
-VITE_WEATHER_API_KEY=your_openweather_api_key
-```
-
-> Note: Do not commit the `.env` file to GitHub.
-
----
-
-## Getting Started
-
-```bash
-git clone https://github.com/your-username/weather-app.git
-cd weather-app
-npm install
-npm run dev
-```
-
----
-
 ## Architecture Overview
 
 * **Services Layer:** Handles all API requests
 * **Custom Hooks:** Manages business logic and state
 * **Context API:** Global theme management (dark/light)
 * **Components:** Focused on UI rendering only
-
----
 
 ---
 
