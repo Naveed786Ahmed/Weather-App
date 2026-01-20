@@ -1,8 +1,12 @@
 import { Droplets, Eye, Thermometer, Wind } from 'lucide-react'
 import React from 'react'
 import { STRINGS } from '../../constants/strings'
+import { useTheme } from '../../hooks/UseTheme';
 
-const CurrentWeatherExtraInfo = ({ darkMode, weather }) => {
+const CurrentWeatherExtraInfo = ({ weather }) => {
+
+    const { darkMode } = useTheme();
+
     return (
         <>
             <div className='w-full p-2 sm:p-4 grid grid-cols-2 gap-4 rounded-xl'>

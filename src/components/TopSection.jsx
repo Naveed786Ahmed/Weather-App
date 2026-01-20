@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { STRINGS } from '../constants'
 import { GLASS_BOX } from '../constants/classes.js'
+import { useTheme } from '../hooks/UseTheme.js'
 
-const TopSection = ({ darkMode, toggleTheme, loading, searchCity }) => {
+const TopSection = ({ loading, searchCity }) => {
+
+    const [city, setCity] = useState("");
+    const { darkMode, toggleTheme } = useTheme();
 
     useEffect(() => {
         searchCity("murree");
     }, []);
-
-    const [city, setCity] = useState("");
 
     return (
         <>

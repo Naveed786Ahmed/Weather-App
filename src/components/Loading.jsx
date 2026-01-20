@@ -1,8 +1,12 @@
 import React from 'react'
 import Spinner from "../assets/Spinner.svg"
 import SpinnerLight from "../assets/SpinnerLight.svg"
+import { useTheme } from '../hooks/UseTheme.js';
 
-const Loading = ({ darkMode, error }) => {
+const Loading = () => {
+    
+    const { darkMode } = useTheme();
+
     return (
         <>
             <div className='w-full h-30 sm:h-35 rounded-xl flex items-center justify-center'>

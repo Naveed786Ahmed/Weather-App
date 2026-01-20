@@ -1,11 +1,12 @@
 import React from 'react'
-import sunny from "../../assets/weather/sunny.png"
 import { getWeatherIcon } from '../../constants/weatherIcons'
+import { useTheme } from '../../hooks/UseTheme';
 
-const CurrentImpInfo = ({darkMode, weather}) => {
-    
-    const icon = getWeatherIcon(weather?.condition)
-    
+const CurrentImpInfo = ({ weather }) => {
+
+    const icon = getWeatherIcon(weather?.condition);
+    const { darkMode } = useTheme();
+
     return (
         <>
             <div className='w-full p-2 sm:p-4 flex flex-col bg-white/20 backdrop-blur-md rounded-xl border border-white/30'>
@@ -16,12 +17,12 @@ const CurrentImpInfo = ({darkMode, weather}) => {
 
                 {/* City Temperature */}
                 <div className='w-full p-2 flex flex-col sm:flex-row items-center justify-center'>
-                    
+
                     {/* image container */}
                     <div className='w-full sm:w-1/4 flex items-center justify-center sm:justify-end'>
-                        <img src={icon} alt="" className='w-1/2 sm:w-full'/>
+                        <img src={icon} alt="" className='w-1/2 sm:w-full' />
                     </div>
-                    
+
                     {/* condition & temperature */}
                     <div className='w-full sm:w-1/2 flex flex-col items-center justify-center'>
                         <p className={`${darkMode ? "text-white/80" : "text-black/80"} w-full text-3xl sm:text-5xl font-medium flex items-center justify-center sm:justify-start`}><span className='text-5xl sm:text-7xl'>{weather?.temp}°</span>C</p>
