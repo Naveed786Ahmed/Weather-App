@@ -39,6 +39,7 @@ A modern, responsive weather dashboard built with React and Tailwind CSS. This a
 ```bash
 src/
 ├── assets/          # Images, icons
+├── api/             # API configuration (axios instance, base URL)
 ├── components/      # UI components
 ├── context/         # Context API (Theme)
 ├── hooks/           # Custom hooks
