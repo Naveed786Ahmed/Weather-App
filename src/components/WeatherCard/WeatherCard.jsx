@@ -1,7 +1,7 @@
 import React from 'react'
 import CurrentImpInfo from './CurrentImpInfo.jsx'
 import CurrentWeatherExtraInfo from './CurrentWeatherExtraInfo.jsx'
-import Forecast from './forecast.jsx'
+import Forecast from './Forecast.jsx'
 import { STRINGS } from '../../constants/strings.js'
 import { useTheme } from '../../hooks/UseTheme.js'
 
