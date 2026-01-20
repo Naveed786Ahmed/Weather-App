@@ -1,14 +1,18 @@
 import React from 'react'
 import sunny from "../../assets/weather/sunny.png"
 import { getWeatherIcon } from '../../constants/weatherIcons';
+import { useTheme } from '../../hooks/UseTheme.js';
 
-const Forecast = ({ darkMode, weather }) => {
+const Forecast = ({ weather }) => {
+
+    const { darkMode } = useTheme();
+
     return (
         <>
             <div className='w-full sm:grid sm:grid-cols-1 sm:gap-5 flex gap-4 overflow-x-auto py-4 scrollbar-hide'>
                 {
                     weather?.dailyForecast.map((item, index) => {
-                        
+
                         return (
                             <div key={index} className='w-20 sm:w-full sm:flex sm:items-center sm:justify-between sm:text-md text-sm shrink-0 bg-white/30 backdrop-blur-md border border-white/30 rounded-xl p-2'>
 

@@ -10,7 +10,7 @@ import { toast, ToastContainer } from 'react-toastify'
 
 
 const WeatherPage = () => {
-    const { darkMode, toggleTheme } = useTheme();
+    const { darkMode } = useTheme();
     const { error, weather, loading, searchCity } = useWeather();
     if (error) {
         toast(error)
@@ -24,12 +24,12 @@ const WeatherPage = () => {
                 {/* Main Container */}
                 <div className='w-full bg-white/20 backdrop-blur-xl border border-white/30 rounded-xl shadow-2xl max-w-3xl p-4 sm:p-6 space-y-4'>
                     {/* Top Section */}
-                    <TopSection darkMode={darkMode} toggleTheme={toggleTheme} loading={loading} searchCity={searchCity} />
+                    <TopSection loading={loading} searchCity={searchCity} />
 
                     {
                         (loading || error)
-                            ? <Loading darkMode={darkMode}/>
-                            : <WeatherCard darkMode={darkMode} weather={weather} />
+                            ? <Loading />
+                            : <WeatherCard weather={weather} />
                     }
                 </div>
             </div>
