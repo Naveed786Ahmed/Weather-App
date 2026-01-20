@@ -1,16 +1,88 @@
-# React + Vite
+# 🌦️ Weather App (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive weather dashboard built with React and Tailwind CSS. This application provides real-time weather updates and a 5-day forecast using the OpenWeather API.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## React Compiler
+🔗 **Live Demo:** [https://your-vercel-app-link.vercel.app](https://weather-app-7zdr.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Search weather by city name
+* Real-time weather data
+* Dark / Light mode with persistence
+* Loading and error handling
+* Toast notifications for API errors
+* Custom weather icons
+* Responsive design
+
+---
+
+## Tech Stack
+
+* React (Vite)
+* Axios
+* Context API
+* Custom Hooks
+* React Toastify
+* Tailwind CSS
+* OpenWeather API
+
+---
+
+## Project Structure
+
+```bash
+src/
+├── assets/          # Images, icons
+├── components/      # UI components
+├── context/         # Context API (Theme)
+├── hooks/           # Custom hooks
+├── services/        # API services
+├── utils/           # Helper functions
+├── constants/       # Constants & mappings
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+VITE_WEATHER_API_KEY=your_openweather_api_key
+```
+
+> Note: Do not commit the `.env` file to GitHub.
+
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
+npm install
+npm run dev
+```
+
+---
+
+## Architecture Overview
+
+* **Services Layer:** Handles all API requests
+* **Custom Hooks:** Manages business logic and state
+* **Context API:** Global theme management (dark/light)
+* **Components:** Focused on UI rendering only
+
+---
+
+---
+
+**Developed by Naveed Ahmed**
